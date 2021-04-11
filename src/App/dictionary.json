@@ -1,0 +1,64 @@
+{
+    "food":[
+        {
+            "burger": "dinner"
+        },
+        {
+            "lasagna": "dinner"
+        },
+        {
+            "pasta": "dinner"
+        },
+        {
+            "steak": "dinner"
+        },
+        {
+            "sushi": "dinner"
+        },
+        {
+            "chicken": "dinner"
+        },
+        {
+            "pizza": "dinner"
+        },
+        {
+            "apple pie": "desert"
+        },
+        {
+            "ice cream": "desert"
+        },
+        {
+            "brownie": "desert"
+        },
+        {
+            "cookie": "desert"
+        },
+        {
+            "cake": "desert"
+        },
+        {
+            "creme brule": "desert"
+        },
+        {
+            "chocolate": "desert"
+        },
+        {
+            "salad": "appetizer"
+        },
+        {
+            "calamari": "appetizer"
+        },
+        {
+            "garlic bread": "appetizer"
+        },
+        {
+            "nachos": "appetizer"
+        },
+        {
+            "chips and dip": "appetizer"
+        },
+        {
+            "fries": "appetizer"
+        }
+    ]
+}
