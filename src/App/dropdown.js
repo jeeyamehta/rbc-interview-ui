@@ -1,13 +1,20 @@
 import React from "react";
+import styled from 'styled-components';
 
-const Dropdown = ({ options, title }) => (
+const StyledSelect = styled.div`
+  justify-content: center;
+`;
+
+const Dropdown = ({ options, title, label }) => (
   <div>
-    <h1>{title}</h1>
+    <h2>{title}</h2>
+    <StyledSelect>
     <select>
       {options.map(option => (
-        <option value={option.value}>{option.label}</option>
+        <option>{label}</option>
       ))}
     </select>
+    </StyledSelect>
   </div>
 );
 

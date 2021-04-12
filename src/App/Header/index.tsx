@@ -11,14 +11,6 @@ const HeaderContainer = styled.div`
   padding: 10px 100px 10px 100px;
 `;
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 3;
-  justify-content: center;
-  align-items: flex-start;
-`;
-
 const Title = styled.h1`
   color: ${colours.black};
   font-size: 40px;
