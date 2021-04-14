@@ -32,17 +32,22 @@ const MainContent = styled.div`
 
 function App() {
   const dictObj = JSON.parse(JSON.stringify(dictionary.food));
-  console.log(dictObj);
   return (
     <Container>
       <Header />
       <SubContent>
         <MainContent>
-          <Dropdown options={dictObj} title={"Select a Food"} option={dictObj.key} label={dictObj.food}/>
+          <Dropdown
+            options={dictObj}
+            title={"Select a Food"}
+            name={dictObj.name}
+            foodType={dictObj.foodType}
+          />
         </MainContent>
       </SubContent>
     </Container>
   );
+
 }
 
 export default App;

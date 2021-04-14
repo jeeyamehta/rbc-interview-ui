@@ -1,64 +1,84 @@
 {
     "food":[
         {
-            "burger": "dinner"
+            "name": "burger",
+            "foodType": "dinner"
         },
         {
-            "lasagna": "dinner"
+            "name": "lasagna",
+            "foodType": "dinner"
         },
         {
-            "pasta": "dinner"
+            "name": "pasta",
+            "foodType": "dinner"
         },
         {
-            "steak": "dinner"
+            "name": "steak",
+            "foodType": "dinner"
         },
         {
-            "sushi": "dinner"
+            "name": "sushi",
+            "foodType": "dinner"
         },
         {
-            "chicken": "dinner"
+            "name": "chicken",
+            "foodType": "dinner"
         },
         {
-            "pizza": "dinner"
+            "name": "pizza",
+            "foodType": "dinner"
         },
         {
-            "apple pie": "desert"
+            "name": "apple pie",
+            "foodType": "desert"
         },
         {
-            "ice cream": "desert"
+            "name": "ice cream",
+            "foodType": "desert"
         },
         {
-            "brownie": "desert"
+            "name": "brownie",
+            "foodType": "desert"
         },
         {
-            "cookie": "desert"
+            "name": "cookie",
+            "foodType": "desert"
         },
         {
-            "cake": "desert"
+            "name": "cake",
+            "foodType": "desert"
         },
         {
-            "creme brule": "desert"
+            "name": "creme brule",
+            "foodType": "desert"
         },
         {
-            "chocolate": "desert"
+            "name": "chocolate",
+            "foodType": "desert"
         },
         {
-            "salad": "appetizer"
+            "name": "salad",
+            "foodType": "appetizer"
         },
         {
-            "calamari": "appetizer"
+            "name": "calamari",
+            "foodType": "appetizer"
         },
         {
-            "garlic bread": "appetizer"
+            "name": "garlic bread",
+            "foodType": "appetizer"
         },
         {
-            "nachos": "appetizer"
+            "name": "nachos",
+            "foodType": "appetizer"
         },
         {
-            "chips and dip": "appetizer"
+            "name": "chips and dip",
+            "foodType": "appetizer"
         },
         {
-            "fries": "appetizer"
+            "name": "fries",
+            "foodType": "appetizer"
         }
     ]
 }
