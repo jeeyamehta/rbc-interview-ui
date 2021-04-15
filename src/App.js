@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { Header } from './App/Header';
@@ -32,6 +32,11 @@ const MainContent = styled.div`
 
 function App() {
   const dictObj = JSON.parse(JSON.stringify(dictionary.food));
+  const [value, setValue] = useState('');
+  const handleSelect = (e) => {
+    console.log(e);
+    setValue(e)
+  }
   return (
     <Container>
       <Header />
@@ -41,13 +46,14 @@ function App() {
             options={dictObj}
             title={"Select a Food"}
             name={dictObj.name}
-            foodType={dictObj.foodType}
+            onSelect={handleSelect}
           />
+
+          <h4>You selected {value}</h4>
         </MainContent>
       </SubContent>
     </Container>
   );
-
 }
 
 export default App;

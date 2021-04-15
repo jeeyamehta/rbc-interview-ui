@@ -1,84 +1,84 @@
 {
-    "food":[
+    "food": [
         {
-            "name": "burger",
+            "name": "Burger",
+            "foodType": "Dinner"
+        },
+        {
+            "name": "Lasagna",
+            "foodType": "Dinner"
+        },
+        {
+            "name": "Pasta",
             "foodType": "dinner"
         },
         {
-            "name": "lasagna",
-            "foodType": "dinner"
+            "name": "Steak",
+            "foodType": "Dinner"
         },
         {
-            "name": "pasta",
-            "foodType": "dinner"
+            "name": "Sushi",
+            "foodType": "Dinner"
         },
         {
-            "name": "steak",
-            "foodType": "dinner"
+            "name": "Chicken",
+            "foodType": "Dinner"
         },
         {
-            "name": "sushi",
-            "foodType": "dinner"
+            "name": "Pizza",
+            "foodType": "Dinner"
         },
         {
-            "name": "chicken",
-            "foodType": "dinner"
+            "name": "Apple pie",
+            "foodType": "Desert"
         },
         {
-            "name": "pizza",
-            "foodType": "dinner"
+            "name": "Ice cream",
+            "foodType": "Desert"
         },
         {
-            "name": "apple pie",
-            "foodType": "desert"
+            "name": "Brownie",
+            "foodType": "Desert"
         },
         {
-            "name": "ice cream",
-            "foodType": "desert"
+            "name": "Cookie",
+            "foodType": "Desert"
         },
         {
-            "name": "brownie",
-            "foodType": "desert"
+            "name": "Cake",
+            "foodType": "Desert"
         },
         {
-            "name": "cookie",
-            "foodType": "desert"
+            "name": "Creme brulee",
+            "foodType": "Desert"
         },
         {
-            "name": "cake",
-            "foodType": "desert"
+            "name": "Chocolate",
+            "foodType": "Desert"
         },
         {
-            "name": "creme brule",
-            "foodType": "desert"
+            "name": "Salad",
+            "foodType": "Appetizer"
         },
         {
-            "name": "chocolate",
-            "foodType": "desert"
+            "name": "Calamari",
+            "foodType": "Appetizer"
         },
         {
-            "name": "salad",
-            "foodType": "appetizer"
+            "name": "Garlic bread",
+            "foodType": "Appetizer"
         },
         {
-            "name": "calamari",
-            "foodType": "appetizer"
+            "name": "Nachos",
+            "foodType": "Appetizer"
         },
         {
-            "name": "garlic bread",
-            "foodType": "appetizer"
+            "name": "Chips and dip",
+            "foodType": "Appetizer"
         },
         {
-            "name": "nachos",
-            "foodType": "appetizer"
-        },
-        {
-            "name": "chips and dip",
-            "foodType": "appetizer"
-        },
-        {
-            "name": "fries",
-            "foodType": "appetizer"
+            "name": "Fries",
+            "foodType": "Appetizer"
         }
     ]
 }

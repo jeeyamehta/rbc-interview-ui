@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dropdown = ({ options, title, value }) => (
+const Dropdown = ({ options, title }) => (
   <div>
     <h2>{title}</h2>
     <select>
@@ -8,9 +8,6 @@ const Dropdown = ({ options, title, value }) => (
         <option>{option.name}</option>
       ))}
     </select>
-    {options.map(option => (
-    <h3>{option.foodType}</h3>
-    ))}
   </div>
 );
 
