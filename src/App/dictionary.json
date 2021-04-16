@@ -1,6 +1,30 @@
 {
     "food": [
         {
+            "name": "Salad",
+            "foodType": "Appetizer"
+        },
+        {
+            "name": "Calamari",
+            "foodType": "Appetizer"
+        },
+        {
+            "name": "Garlic bread",
+            "foodType": "Appetizer"
+        },
+        {
+            "name": "Nachos",
+            "foodType": "Appetizer"
+        },
+        {
+            "name": "Chips and dip",
+            "foodType": "Appetizer"
+        },
+        {
+            "name": "Fries",
+            "foodType": "Appetizer"
+        },
+        {
             "name": "Burger",
             "foodType": "Dinner"
         },
@@ -55,30 +79,6 @@
         {
             "name": "Chocolate",
             "foodType": "Desert"
-        },
-        {
-            "name": "Salad",
-            "foodType": "Appetizer"
-        },
-        {
-            "name": "Calamari",
-            "foodType": "Appetizer"
-        },
-        {
-            "name": "Garlic bread",
-            "foodType": "Appetizer"
-        },
-        {
-            "name": "Nachos",
-            "foodType": "Appetizer"
-        },
-        {
-            "name": "Chips and dip",
-            "foodType": "Appetizer"
-        },
-        {
-            "name": "Fries",
-            "foodType": "Appetizer"
         }
     ]
 }

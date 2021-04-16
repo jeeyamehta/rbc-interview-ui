@@ -32,11 +32,18 @@ const MainContent = styled.div`
 
 function App() {
   const dictObj = JSON.parse(JSON.stringify(dictionary.food));
-  const [value, setValue] = useState('');
-  const handleSelect = (e) => {
-    console.log(e);
-    setValue(e)
+  const [foodName, setFoodName] = useState('');
+  const [foodType, setFoodType] = useState('');
+  const handleSelect = (option) => {
+    setFoodName(option);
   }
+
+  const findFoodType = (option) => {
+    dictObj.map(option = option.name);
+    setFoodType(option.foodType);
+    console.log(foodType);
+  }
+
   return (
     <Container>
       <Header />
@@ -45,11 +52,12 @@ function App() {
           <Dropdown
             options={dictObj}
             title={"Select a Food"}
-            name={dictObj.name}
             onSelect={handleSelect}
+            foodType={findFoodType}
           />
-
-          <h4>You selected {value}</h4>
+          {foodName !== "" && foodName !== "--" &&
+            <h4>You selected {foodName} which is a {foodType}</h4>
+          }
         </MainContent>
       </SubContent>
     </Container>
