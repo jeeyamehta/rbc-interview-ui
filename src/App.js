@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 import styled from 'styled-components';
 
 import { Header } from './App/Header';
 import Dropdown from './App/dropdown';
-
-import dictionary from './App/dictionary.json';
 
 const Container = styled.div`
   top: 0;
@@ -31,7 +30,7 @@ const MainContent = styled.div`
 `;
 
 function App() {
-  const dictObj = JSON.parse(JSON.stringify(dictionary.food));
+  const dictObj = axios.get('dictionary.json');
   const [value, setValue] = useState('');
   const handleSelect = (e) => {
     console.log(e);
