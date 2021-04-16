@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dropdown = ({ options, title, onSelect, foodType }) => (
+const Dropdown = ({ options, title, onSelect }) => (
   <div>
     <h2>{title}</h2>
     <select onChange={(e) => {

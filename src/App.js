@@ -33,15 +33,17 @@ const MainContent = styled.div`
 function App() {
   const dictObj = JSON.parse(JSON.stringify(dictionary.food));
   const [foodName, setFoodName] = useState('');
-  const [foodType, setFoodType] = useState('');
   const handleSelect = (option) => {
     setFoodName(option);
   }
 
-  const findFoodType = (option) => {
-    dictObj.map(option = option.name);
-    setFoodType(option.foodType);
-    console.log(foodType);
+  const getFoodType = () => {
+    let array = dictObj.filter(option => option.name === foodName)
+    if (array.length > 0) {
+      return array[0].foodType;
+    } else {
+      return "";
+    }
   }
 
   return (
@@ -53,10 +55,9 @@ function App() {
             options={dictObj}
             title={"Select a Food"}
             onSelect={handleSelect}
-            foodType={findFoodType}
           />
           {foodName !== "" && foodName !== "--" &&
-            <h4>You selected {foodName} which is a {foodType}</h4>
+            <h4>You selected {foodName} which is a {getFoodType()}</h4>
           }
         </MainContent>
       </SubContent>
