@@ -30,12 +30,21 @@ const MainContent = styled.div`
 `;
 
 function App() {
-  const dictObj = axios.get('dictionary.json');
-  const [value, setValue] = useState('');
-  const handleSelect = (e) => {
-    console.log(e);
-    setValue(e)
+  const dictObj = JSON.parse(axios.get('localhost:8888'));
+  const [foodName, setFoodName] = useState('');
+  const handleSelect = (option) => {
+    setFoodName(option);
   }
+
+  const getFoodType = () => {
+    let array = dictObj.filter(option => option.name === foodName)
+    if (array.length > 0) {
+      return array[0].foodType;
+    } else {
+      return "";
+    }
+  }
+
   return (
     <Container>
       <Header />
@@ -44,11 +53,11 @@ function App() {
           <Dropdown
             options={dictObj}
             title={"Select a Food"}
-            name={dictObj.name}
             onSelect={handleSelect}
           />
-
-          <h4>You selected {value}</h4>
+          {foodName !== "" && foodName !== "--" &&
+            <h4>You selected {foodName} which is a {getFoodType()}</h4>
+          }
         </MainContent>
       </SubContent>
     </Container>
