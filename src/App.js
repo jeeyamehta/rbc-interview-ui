@@ -15,19 +15,21 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const SubContent = styled.div`
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: row;
-  overflow: hidden;
-`;
-
 const MainContent = styled.div`
   display: flex;
   align-content: center;
   overflow: auto;
   flex-direction: column;
+  text-align: center;
+`;
+
+const Title = styled.h2`
+  margin: 15px 0 10px 0;
+`;
+
+const Message = styled.h1`
+  margin-top: 30px;
+  font-weight: 600;
 `;
 
 function App() {
@@ -49,18 +51,19 @@ function App() {
   return (
     <Container>
       <Header />
-      <SubContent>
-        <MainContent>
-          <Dropdown
-            options={dictObj}
-            title={"Select a Food"}
-            onSelect={handleSelect}
-          />
-          {foodName !== "" && foodName !== "--" &&
-            <h4>You selected {foodName} which is a {getFoodType()}</h4>
-          }
-        </MainContent>
-      </SubContent>
+      <MainContent>
+        <Title>Select A Food</Title>
+        <Dropdown
+          options={dictObj}
+          onSelect={handleSelect}
+        />
+        {foodName !== "" && foodName !== "--" && getFoodType() !== "Appetizer" &&
+          <Message>You selected {foodName} which is a {getFoodType()}!</Message>
+        }
+        {getFoodType() === "Appetizer" &&
+          <Message>You selected {foodName} which is an {getFoodType()}!</Message>
+        }
+      </MainContent>
     </Container>
   );
 }

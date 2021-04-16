@@ -13,9 +13,10 @@ const HeaderContainer = styled.div`
 
 const Title = styled.h1`
   color: ${colours.black};
-  font-size: 40px;
+  font-size: 35px;
   margin: 10px 0 15px 0;
   align-self: center;
+  font-weight: 600;
   width: 100%;
 `;
 
@@ -37,6 +38,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
 `;
 
 const TitleContainer = styled.div`

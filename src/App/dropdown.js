@@ -1,8 +1,7 @@
 import React from "react";
 
-const Dropdown = ({ options, title, onSelect }) => (
+const Dropdown = ({ options, onSelect }) => (
   <div>
-    <h2>{title}</h2>
     <select onChange={(e) => {
       onSelect(e.target.value);
     }}>
