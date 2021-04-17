@@ -3,8 +3,8 @@ import React from "react";
 const Dropdown = ({ options, title, onSelect }) => (
   <div>
     <h2>{title}</h2>
-    <select onChange={(e) => {
-      onSelect(e.target.value);
+    <select onChange={(selected) => {
+      onSelect(selected.target.value);
     }}>
       <option>--</option>
       {options.map((option, i) => (
