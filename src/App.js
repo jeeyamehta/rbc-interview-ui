@@ -58,10 +58,10 @@ function App() {
           onSelect={handleSelect}
         />
         {foodName !== "" && foodName !== "--" && getFoodType() !== "Appetizer" &&
-          <Message>You selected {foodName} which is a {getFoodType()}!</Message>
+          <Message>You selected <b>{foodName}</b> which is a <b>{getFoodType()}</b>!</Message>
         }
         {getFoodType() === "Appetizer" &&
-          <Message>You selected {foodName} which is an {getFoodType()}!</Message>
+          <Message>You selected <b>{foodName}</b> which is an <b>{getFoodType()}</b>!</Message>
         }
       </MainContent>
     </Container>

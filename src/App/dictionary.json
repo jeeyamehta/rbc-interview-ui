@@ -26,31 +26,31 @@
         },
         {
             "name": "Burger",
-            "foodType": "Dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Lasagna",
-            "foodType": "Dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Pasta",
-            "foodType": "dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Steak",
-            "foodType": "Dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Sushi",
-            "foodType": "Dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Chicken",
-            "foodType": "Dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Pizza",
-            "foodType": "Dinner"
+            "foodType": "Main Course"
         },
         {
             "name": "Apple pie",
