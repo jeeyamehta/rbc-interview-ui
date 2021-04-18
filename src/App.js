@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Header } from './App/Header';
+import { Header } from './App/Header/header';
 import Dropdown from './App/dropdown';
 
 import dictionary from './App/dictionary.json';
@@ -33,14 +33,20 @@ const Message = styled.h1`
 `;
 
 function App() {
-  const dictObj = JSON.parse(JSON.stringify(dictionary.food));
+
+  // 1. Reading key value key pairs from the JSON file into the dictionaryObj
+  const dictionaryObj = JSON.parse(JSON.stringify(dictionary.food));
+
+
+  // 2. Store selected Food into the foodName object
   const [foodName, setFoodName] = useState('');
   const handleSelect = (option) => {
     setFoodName(option);
   }
 
+  // 3. Get the foodtype for the selected Food
   const getFoodType = () => {
-    let array = dictObj.filter(option => option.name === foodName)
+    let array = dictionaryObj.filter(option => option.name === foodName)
     if (array.length > 0) {
       return array[0].foodType;
     } else {
@@ -48,24 +54,26 @@ function App() {
     }
   }
 
+  // User Interface (UI) Markup Code
   return (
     <Container>
       <Header />
       <MainContent>
         <Title>Select A Food</Title>
         <Dropdown
-          options={dictObj}
+          options={dictionaryObj}
           onSelect={handleSelect}
         />
         {foodName !== "" && foodName !== "--" && getFoodType() !== "Appetizer" &&
-          <Message>You selected <b>{foodName}</b> which is a <b>{getFoodType()}</b>!</Message>
+          <Message>You selected <b>{foodName}</b> which is a <b><u>{getFoodType()}</u></b>!</Message>
         }
         {getFoodType() === "Appetizer" &&
-          <Message>You selected <b>{foodName}</b> which is an <b>{getFoodType()}</b>!</Message>
+          <Message>You selected <b>{foodName}</b> which is an <b><u>{getFoodType()}</u></b>!</Message>
         }
       </MainContent>
     </Container>
   );
+
 }
 
 export default App;
