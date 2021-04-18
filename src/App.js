@@ -32,18 +32,20 @@ const MainContent = styled.div`
 `;
 
 function App() {
-  //variable object to hold dictionary of all the food.
-  const [dictionaryObject, setDictionaryObject] = useState(undefined);
   // Function that gets the JSON object from the backend server and returns the array of foods
   async function getJSON() {
     const response = await axios.get(API_SERVER);
-    setDictionaryObject(response.data)
-    return response.data;
+    return Promise.resolve(response.data);
   }
 
-  //When the app loads, it makes a call to the back-end
+  //variable to hold dictionary of all the foods
+  const [dictionaryObject, setDictionaryObject] = useState(undefined);
+
+  //When the app loads, it makes a call to the back-end to get the JSON of all the foods
   React.useEffect(() => {
-    getJSON();
+    getJSON().then((data) => {
+      setDictionaryObject(data.food)
+    });
   }, [])
 
   // variable to hold the name of the selected food item
@@ -59,9 +61,9 @@ function App() {
     let array = dictionaryObject.filter(option => option.name === foodName)
     if (array.length > 0) {
       return array[0].foodType;
-    } else {
-      return "";
     }
+
+    return "";
   }
 
   return (
@@ -69,11 +71,11 @@ function App() {
       <Header />
       <SubContent>
         <MainContent>
-          {dictionaryObject && dictionaryObject.data &&
+          {dictionaryObject &&
             <>
               {/*Dropdown component*/}
               <Dropdown
-                options={dictionaryObject.food}
+                options={dictionaryObject}
                 title={"Select a Food"}
                 onSelect={handleSelect}
               />
