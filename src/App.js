@@ -37,7 +37,6 @@ function App() {
   // 1. Reading key value key pairs from the JSON file into the dictionaryObj
   const dictionaryObj = JSON.parse(JSON.stringify(dictionary.food));
 
-
   // 2. Store selected Food into the foodName object
   const [foodName, setFoodName] = useState('');
   const handleSelect = (option) => {
