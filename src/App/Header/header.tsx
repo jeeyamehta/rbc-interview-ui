@@ -52,8 +52,8 @@ export const Header: React.FC = () => {
       <Row>
         <TitleContainer>
           <Title>Jeeya Mehta</Title>
-          <SubtitleSmall>RBC interview program</SubtitleSmall>
-          </TitleContainer>
+          <SubtitleSmall>RBC interview API program</SubtitleSmall>
+        </TitleContainer>
       </Row>
     </HeaderContainer>
   )
