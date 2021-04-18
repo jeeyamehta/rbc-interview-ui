@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Header } from './App/Header/header';
+import { Header } from './App/header';
 import Dropdown from './App/dropdown';
 
 import dictionary from './App/dictionary.json';
@@ -32,6 +32,7 @@ const Message = styled.h1`
   font-weight: 600;
 `;
 
+// Main App function
 function App() {
 
   // 1. Reading key value key pairs from the JSON file into the dictionaryObj
@@ -63,6 +64,8 @@ function App() {
           options={dictionaryObj}
           onSelect={handleSelect}
         />
+
+        {/*Message to display only if a proper food item has been selected*/}
         {foodName !== "" && foodName !== "--" && getFoodType() !== "Appetizer" &&
           <Message>You selected <b>{foodName}</b> which is a <b><u>{getFoodType()}</u></b>!</Message>
         }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { colours } from '../colours';
+import { colours } from './colours';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
         <TitleContainer>
           <Title>Jeeya Mehta</Title>
           <SubtitleSmall>RBC interview program</SubtitleSmall>
-          </TitleContainer>
+        </TitleContainer>
       </Row>
     </HeaderContainer>
   )

@@ -1,5 +1,6 @@
 import React from "react";
 
+// Dropdown function that you can select any of the 20 foods from
 const Dropdown = ({ options, onSelect }) => (
   <div>
     <select onChange={(e) => {
