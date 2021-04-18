@@ -50,7 +50,6 @@ function App() {
     if (array.length > 0) {
       return array[0].foodType;
     }
-
     return "";
   }
 
