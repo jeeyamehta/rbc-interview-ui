@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Header } from './App/Header';
 import Dropdown from './App/dropdown';
 
-const API_SERVER = 'http://localhost:8888';
+const API_SERVER = 'http://127.0.0.1:8888';
 
 const Container = styled.div`
   top: 0;
@@ -32,16 +32,21 @@ const MainContent = styled.div`
 `;
 
 function App() {
+  //variable object to hold dictionary of all the food.
+  const [dictionaryObject, setDictionaryObject] = useState(undefined);
   // Function that gets the JSON object from the backend server and returns the array of foods
   async function getJSON() {
-    const response = await (axios.get(API_SERVER));
-    return Promise.resolve({ data: response.data.food });
+    const response = await axios.get(API_SERVER);
+    setDictionaryObject(response.data)
+    return response.data;
   }
 
-  const dictObj = getJSON();
-  console.log(dictObj);
+  //When the app loads, it makes a call to the back-end
+  React.useEffect(() => {
+    getJSON();
+  }, [])
 
-  // variables to hold the name of the selected food item
+  // variable to hold the name of the selected food item
   const [foodName, setFoodName] = useState('');
 
   // Function that sets a value to the food name select to be displayed in the message
@@ -51,7 +56,7 @@ function App() {
 
   // Function that filters through json array to find the selected food's food type
   const getFoodType = () => {
-    let array = dictObj.filter(option => option.name === foodName)
+    let array = dictionaryObject.filter(option => option.name === foodName)
     if (array.length > 0) {
       return array[0].foodType;
     } else {
@@ -64,13 +69,11 @@ function App() {
       <Header />
       <SubContent>
         <MainContent>
-          {JSON.stringify(dictObj)}
-          {dictObj && dictObj.data &&
+          {dictionaryObject && dictionaryObject.data &&
             <>
-              <p>hi</p>
               {/*Dropdown component*/}
               <Dropdown
-                options={dictObj}
+                options={dictionaryObject.food}
                 title={"Select a Food"}
                 onSelect={handleSelect}
               />
