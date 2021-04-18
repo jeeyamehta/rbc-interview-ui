@@ -1,5 +1,6 @@
 import React from "react";
 
+// Dropdown function used to select a food item
 const Dropdown = ({ options, onSelect }) => (
   <div>
     <select onChange={(e) => {

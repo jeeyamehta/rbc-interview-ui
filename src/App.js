@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios'
 import styled from 'styled-components';
 
-import { Header } from './App/Header/header';
+import { Header } from './App/header';
 import Dropdown from './App/dropdown';
 
+// variable holds the API port
 const API_SERVER = 'http://127.0.0.1:8888';
 
 const Container = styled.div`
@@ -33,7 +34,9 @@ const Message = styled.h1`
   font-weight: 600;
 `;
 
+// Main App function
 function App() {
+
   // Function that gets the JSON object from the backend server and returns the array of foods
   async function getJSON() {
     const response = await axios.get(API_SERVER);
@@ -64,7 +67,6 @@ function App() {
     if (array?.length > 0) {
       return array[0].foodType;
     }
-
     return "";
   }
 
@@ -74,12 +76,15 @@ function App() {
       <Header />
       <MainContent>
         <Title>Select A Food</Title>
+        {/*If dictionaryObject is defined display the dropdown and message */}
         {dictionaryObject && (
           <>
             <Dropdown
               options={dictionaryObject}
               onSelect={handleSelect}
             />
+
+            {/*Message to display only if a proper food item has been selected*/}
             {foodName !== "" && foodName !== "--" && getFoodType() !== "Appetizer" &&
               <Message>You selected <b>{foodName}</b> which is a <b><u>{getFoodType()}</u></b>!</Message>
             }
