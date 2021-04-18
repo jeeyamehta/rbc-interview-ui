@@ -49,9 +49,9 @@ function App() {
     let array = dictionaryObj.filter(option => option.name === foodName)
     if (array.length > 0) {
       return array[0].foodType;
-    } else {
-      return "";
     }
+
+    return "";
   }
 
   // User Interface (UI) Markup Code
